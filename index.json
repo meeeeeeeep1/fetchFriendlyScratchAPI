@@ -1,0 +1,7 @@
+{
+  "Site": "https://meeeeeeeep1.github.io/fetchFriendlyScratchAPI/",
+  "cors-proxy": "https://corsproxy.io/",
+  "apis-used": {
+    "scratch": "api.scratch.mit.edu"
+  }
+}
