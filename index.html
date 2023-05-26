@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scratch API Proxy</title>
+</head>
+<body>
+  <pre id="json-data"></pre>
+
+  <script>
+    // Function to make the API request
+    function fetchData() {
+      const apiUrl = 'https://corsproxy.io/?https%3A%2F%2Fapi.scratch.mit.edu%2Fusers%2F-cri-%2F'; // Replace with your API URL
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          // Convert the JSON data to a formatted string
+          const formattedData = JSON.stringify(data, null, 2);
+
+          // Display the formatted JSON data in the <pre> element
+          document.getElementById('json-data').textContent = formattedData;
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error('Error:', error);
+        });
+    }
+
+    // Call the fetchData function to retrieve data
+    fetchData();
+  </script>
+</body>
+</html>
