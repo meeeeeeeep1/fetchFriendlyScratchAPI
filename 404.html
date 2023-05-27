@@ -18,6 +18,12 @@ var username = url.split('/').pop();
 console.log(username);
     // Function to make the API request
     function fetchData() {
+         // Get the current URL
+var url = window.location.href;
+
+// Extract the username from the URL
+var username = url.split('/').pop();
+
       const apiUrl = 'https://corsproxy.io/?https%3A%2F%2Fapi.scratch.mit.edu%2Fusers%2F${username}%2F'; // Replace with your API URL
 
       fetch(apiUrl)
