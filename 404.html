@@ -4,6 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Scratch API Proxy</title>
+  <script>
+  // Set the Content-Type header to application/json
+  document.addEventListener('DOMContentLoaded', function() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', location.href);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send();
+  });
+</script>
+
 </head>
 <body>
   <pre id="json-data"></pre>
